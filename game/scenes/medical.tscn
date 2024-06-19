@@ -1,0 +1,111 @@
+[gd_scene load_steps=17 format=3 uid="uid://nihjfgnd4poo"]
+
+[ext_resource type="Script" path="res://scripts/medical.gd" id="1_gg632"]
+[ext_resource type="Texture2D" uid="uid://dcep2wquwscfb" path="res://assets/sprites/slime_purple.png" id="1_kd6if"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1twp5"]
+atlas = ExtResource("1_kd6if")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7tnl"]
+atlas = ExtResource("1_kd6if")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6oqmc"]
+atlas = ExtResource("1_kd6if")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6knx7"]
+atlas = ExtResource("1_kd6if")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hl7dm"]
+atlas = ExtResource("1_kd6if")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3vyw"]
+atlas = ExtResource("1_kd6if")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sd78k"]
+atlas = ExtResource("1_kd6if")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tp8jc"]
+atlas = ExtResource("1_kd6if")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ha763"]
+atlas = ExtResource("1_kd6if")
+region = Rect2(0, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqq8d"]
+atlas = ExtResource("1_kd6if")
+region = Rect2(24, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ijkc"]
+atlas = ExtResource("1_kd6if")
+region = Rect2(48, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_giias"]
+atlas = ExtResource("1_kd6if")
+region = Rect2(72, 48, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x8ppb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1twp5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7tnl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6oqmc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6knx7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hl7dm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3vyw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sd78k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tp8jc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ha763")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqq8d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ijkc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_giias")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6oxj1"]
+radius = 5.09902
+
+[node name="Medical" type="Area2D"]
+script = ExtResource("1_gg632")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_x8ppb")
+autoplay = "default"
+frame_progress = 0.738836
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 5)
+shape = SubResource("CircleShape2D_6oxj1")
