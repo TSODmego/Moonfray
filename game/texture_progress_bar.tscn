@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ix5d6ul73ysh"]
+
+[ext_resource type="Texture2D" uid="uid://ndirhoegacud" path="res://assets/sprites/新建画布2.png" id="1_gk8fj"]
+[ext_resource type="Script" path="res://assets/sprites/TextureProgressBar.gd" id="2_clbok"]
+
+[node name="TextureProgressBar" type="TextureProgressBar"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_progress = ExtResource("1_gk8fj")
+script = ExtResource("2_clbok")
