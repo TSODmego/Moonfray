@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 signal healthChanged
 
-const SPEED = 175
+const SPEED = 165
 const JUMP_VELOCITY = -250
 const DOUBLE_JUMP_VELOCITY = -200 # 二段跳的跳跃速度
 const MAX_HEALTH = 100  # 最大生命值
@@ -77,7 +77,7 @@ func heal(amount):
 	print("Current health: %d" % currentHealth)
 
 func die():
-	is_dying = true
+	is_dying = true	
 	print("Player died!")
 	animated_sprite_2d.play("death")
 	await animated_sprite_2d.animation_finished 

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b12yljme2tmb2"]
+
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_exycq"]
+[ext_resource type="Texture2D" uid="uid://dukv4ymnp4iaf" path="res://assets/sprites/111.png" id="1_l6vtv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ywfpw"]
+radius = 9.0
+height = 20.0
+
+[node name="pet" type="CharacterBody2D"]
+script = ExtResource("1_exycq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(9.53674e-07, -2)
+scale = Vector2(0.132353, 0.132353)
+texture = ExtResource("1_l6vtv")
+region_enabled = true
+region_rect = Rect2(13.0264, 8.6236, 164.211, 181.116)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_ywfpw")

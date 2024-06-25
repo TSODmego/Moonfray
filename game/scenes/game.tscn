@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://d2n467kl7dy83"]
+[gd_scene load_steps=13 format=3 uid="uid://d2n467kl7dy83"]
 
 [ext_resource type="PackedScene" uid="uid://cfxpoe8ac6n5g" path="res://scenes/player.tscn" id="1_83rcc"]
 [ext_resource type="Texture2D" uid="uid://rvau5d0mihhv" path="res://assets/sprites/world_tileset.png" id="2_7u2uj"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://uh2yvxtckqiu" path="res://scenes/battleBGM0.tscn" id="5_nch1y"]
 [ext_resource type="Script" path="res://scripts/TextureProgressBar.gd" id="6_icg3d"]
 [ext_resource type="PackedScene" uid="uid://nihjfgnd4poo" path="res://scenes/medical.tscn" id="7_tbm42"]
+[ext_resource type="PackedScene" uid="uid://b12yljme2tmb2" path="res://scenes/pet.tscn" id="8_etsis"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nrj22"]
 texture = ExtResource("2_7u2uj")
@@ -407,7 +408,8 @@ texture = ExtResource("2_7u2uj")
 2:4/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSet" id="TileSet_jfhen"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 3
+physics_layer_0/collision_mask = 3
 sources/0 = SubResource("TileSetAtlasSource_nrj22")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ir51h"]
@@ -448,6 +450,13 @@ shape = SubResource("WorldBoundaryShape2D_ir51h")
 
 [node name="AudioStreamPlayer2D" parent="." instance=ExtResource("5_nch1y")]
 bus = &"BGM"
+
+[node name="pet1" parent="." instance=ExtResource("8_etsis")]
+position = Vector2(-9, -81)
+collision_layer = 2
+
+[node name="pet2" parent="." instance=ExtResource("8_etsis")]
+position = Vector2(3, -55)
 
 [node name="UI" type="CanvasLayer" parent="."]
 
